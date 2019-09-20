@@ -12,6 +12,7 @@
   position: relative;
   top: 0;
   height: calc(100vh - 48px);
+  margin-right: -4px;
   padding-top: .5rem;
   overflow-x: hidden;
   overflow-y: auto;
@@ -46,4 +47,20 @@
 .sidebar-heading {
   font-size: .75rem;
   text-transform: uppercase;
+}
+
+.a-hl:hover{
+  background-color: #888 !important;
+}
+
+.a-txt-hl:hover{
+  color: #DDD !important;
+}
+
+.exp-hl{
+  color: #333 !important;
+}
+
+.exp-hl:hover{
+  color: #DDD !important;
 }
