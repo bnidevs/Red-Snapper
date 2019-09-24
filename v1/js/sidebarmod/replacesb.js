@@ -8,6 +8,9 @@ var layoutreplace = () => {
 		document.getElementById("sbreplloc").innerHTML = response;
 	})
 	.catch(error => console.error('Error:', error));
+
+	document.getElementById("defsb").addEventListener("click", defaultreplace);
+	document.getElementById("sblayout").addEventListener("click", layoutreplace);
 }
 
 var defaultreplace = () => {
@@ -17,4 +20,7 @@ var defaultreplace = () => {
 		document.getElementById("sbreplloc").innerHTML = response;
 	})
 	.catch(error => console.error('Error:', error));
+
+	document.getElementById("defsb").addEventListener("click", defaultreplace);
+	document.getElementById("sblayout").addEventListener("click", layoutreplace);
 }
