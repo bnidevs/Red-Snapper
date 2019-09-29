@@ -49,6 +49,11 @@
   text-transform: uppercase;
 }
 
+.a-hl{
+  background-color: transparent;
+  border: none;
+}
+
 .a-hl:hover{
   background-color: #888 !important;
   cursor: pointer;
@@ -68,4 +73,8 @@
   color: #DDD !important;
   border: none;
   background-color: transparent;
+}
+
+.exp-hl:focus{
+  outline: 0;
 }
