@@ -70,10 +70,9 @@ var defaultreplace = () => {
 	.then(function(){
 		document.getElementById("defsb").addEventListener("click", defaultreplace);
 		document.getElementById("sblayout").addEventListener("click", layoutreplace);
-		document.getElementById("sbmedia").addEventListener("click", defaultreplace);
-		document.getElementById("sbtext").addEventListener("click", layoutreplace);
-		document.getElementById("sbanim").addEventListener("click", defaultreplace);
-		document.getElementById("sbhelp").addEventListener("click", layoutreplace);
+		document.getElementById("sbmedia").addEventListener("click", mediareplace);
+		document.getElementById("sbtext").addEventListener("click", textreplace);
+		document.getElementById("sbanim").addEventListener("click", animreplace);
 	})
 	.catch(error => console.error('Error:', error));
 }
