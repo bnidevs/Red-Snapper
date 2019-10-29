@@ -12,9 +12,9 @@ var layoutreplace = () => {
 	.then(function(response){
 		document.getElementById("sbreplloc").innerHTML = response;
 	})
-	// .then(function(){
-	// 	document.getElementById("defsb").addEventListener("click", defaultreplace);
-	// })
+	.then(function(){
+		document.getElementById("defsb").addEventListener("click", defaultreplace);
+	})
 	.catch(error => console.error('Error:', error));
 }
 
