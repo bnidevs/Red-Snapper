@@ -55,7 +55,7 @@ var animreplace = () => {
 }
 
 var defaultreplace = () => {
-	fetch('https://raw.githubusercontent.com/bnidevs/Red-Snapper/master/v1/js/sidebarmod/default/default.html', {mode: 'no-cors'})
+	fetch('https://raw.githubusercontent.com/bnidevs/Red-Snapper/master/v1/js/sidebarmod/default/default.html')
 	.then(response => response.text())
 	.then(function(response){
 		document.getElementById("sbreplloc").innerHTML = response;
