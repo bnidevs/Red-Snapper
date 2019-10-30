@@ -16,5 +16,5 @@ function drag(ev) {
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
-  if(ev.target.)
+  ev.target.childNodes[0].childNodes[0].insertAdjacentHTML('afterend', data);
 }
