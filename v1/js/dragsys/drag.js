@@ -3,11 +3,18 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
+	if(ev.target.id == "navdraggable"){
+		fetch('https://raw.githubusercontent.com/bnidevs/Red-Snapper/master/v1/js/iframemod/layoutadd/navbar.html')
+		.then(response => response.text())
+		.then(function(response){
+			ev.dataTransfer.setData("text", response);
+		})
+		.catch(error => console.error('Error:', error));
+	}
 }
 
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+  if(ev.target.)
 }

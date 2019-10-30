@@ -1,0 +1,11 @@
+.brdr-hl:hover {
+  outline: dashed 3px black;
+}
+
+.brdr-sl {
+  outline: solid 3px black;
+}
+
+.brder-none {
+  outline: none;
+}
