@@ -16,5 +16,6 @@ function drag(ev) {
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
-  ev.target.body.insertAdjacentHTML('beforeend', data);
+  iframedoc = ev.target.contentDocument || ev.target.contentWindow.document;
+  iframedoc.body.insertAdjacentHTML('beforeend', data);
 }
