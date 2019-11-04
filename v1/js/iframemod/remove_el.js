@@ -1,4 +1,6 @@
-document.addEventListener("keydown", keyCheck);
+var f = document.getElementById('frame').contentWindow.document || document.getElementById('frame').contentDocument;
+
+f.addEventListener("keydown", keyCheck);
 
 function keyCheck(event)
 {
@@ -9,7 +11,7 @@ function keyCheck(event)
 }
 
 var wipeSelected = () => {
-   var all = document.getElementsByClassName("brdr-sl");
+   var all = f.getElementsByClassName("brdr-sl");
    const all_len = all.length;
    for(var i = 0; i < all_len; i++){
       all[0].remove();

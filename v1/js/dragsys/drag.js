@@ -4,23 +4,18 @@ function allowDrop(ev) {
   	ev.preventDefault();
 }
 
-function drag(ev) {
+async function drag(ev) {
 
 	if(ev.target.id == "navdraggable"){
 
-		// fetch('https://raw.githubusercontent.com/bnidevs/Red-Snapper/master/v1/js/iframemod/layoutadd/navbar.html')
-		// .then(response => response.text())
-		// .then(function(response){
-		// 	console.log(response);
-		// 	ev.dataTransfer.setData("text", response);
-		// }).then(function(){
-		// 	return;
-		// })
-		// .catch(error => console.error('Error:', error));
+		var resp = await fetch('https://raw.githubusercontent.com/bnidevs/Red-Snapper/master/v1/js/insertions/layout/navbar.html');
+		resp = await resp.text();
 
-		ev.dataTransfer.setData("text", '<nav class="navbar navbar-expand-lg brdr-hl"><p class="navbar-brand">E Pluribus Unum</p></nav>');
+		// ev.dataTransfer.setData("text", '<nav class="navbar navbar-expand-lg brdr-hl"><p class="navbar-brand">E Pluribus Unum</p></nav>');
+		ev.dataTransfer.setData("text", resp);
 		carry = true;
 		dtm();
+
 	}
 
 }
@@ -30,13 +25,19 @@ function drop(ev) {
 	var data = ev.dataTransfer.getData("text");
 	iframedoc = document.getElementById("frame").contentDocument || document.getElementById("frame").contentWindow.document;
 	iframedoc.body.insertAdjacentHTML('beforeend', data);
+	iframedoc.body.lastChild.addEventListener('click', () => {
+    	iframedoc.body.lastChild.classList.contains('brdr-sl')
+      	? iframedoc.body.lastChild.classList.replace('brdr-sl', 'brdr-none')
+      	: iframedoc.body.lastChild.classList.add('brdr-sl');
+  	});
 	carry = false;
+	dtm();
 }
 
 function dtm(){
 	if(carry){
-		document.getElementById("drop_dest").style.pointerEvents = "auto";
+		document.getElementById("drop_dest").style.zIndex = 1;
 	}else{
-		document.getElementById("drop_dest").style.pointerEvents = "none";
+		document.getElementById("drop_dest").style.zIndex = -1;
 	}
 }
