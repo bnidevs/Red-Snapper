@@ -58,7 +58,9 @@ var animreplace = () => {
 var open_prev = () => {
 	var new_win = window.open("", "Preview Page");
 	var iframedoc = document.getElementById("frame").contentDocument || document.getElementById("frame").contentWindow.document;
-	new_win.document.body.innerHTML = iframedoc;
+	var prev_content = iframedoc.body;
+	prev_content.childNodes[0].remove();
+	new_win.document.body.innerHTML = prev_content.innerHTML;
 }
 
 var defaultreplace = () => {
