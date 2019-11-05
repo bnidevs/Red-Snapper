@@ -60,6 +60,7 @@ var open_prev = () => {
 	var iframedoc = document.getElementById("frame").contentDocument || document.getElementById("frame").contentWindow.document;
 	var prev_content = iframedoc.body;
 	prev_content.childNodes[0].remove();
+	new_win.document.head.innerHTML = iframedoc.head.innerHTML;
 	new_win.document.body.innerHTML = prev_content.innerHTML;
 }
 
