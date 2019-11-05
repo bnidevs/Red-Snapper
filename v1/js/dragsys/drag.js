@@ -4,7 +4,7 @@ function allowDrop(ev) {
   	ev.preventDefault();
 }
 
-async function drag(ev) {
+function drag(ev) {
 
 	if(ev.target.id == "navdraggable"){
 
@@ -13,17 +13,21 @@ async function drag(ev) {
 
 		ev.dataTransfer.setData("text", '<nav class="navbar navbar-expand-lg brdr-hl"><p class="navbar-brand">E Pluribus Unum</p></nav>');
 		//ev.dataTransfer.setData("text", resp);
-		carry = true;
-		dtm();
 
 	}else if(ev.target.id == "divdraggable"){
 
 		ev.dataTransfer.setData("text", '<div class="row brdr-hl"><div class="col-1"></div><div class="col-10"><p>Doggo ipsum puggorino most angery pupper I have ever seen borkf heckin good boys, lotsa pats. He made many woofs corgo fluffer fat boi the neighborhood pupper borkdrive, you are doing me a frighten ruff pupperino borking doggo. Long bois adorable doggo puggorino wow very biscit shibe waggy wags shibe, heckin good boys tungg very hand that feed shibe extremely cuuuuuute borking doggo. adorable doggo fluffer. Shooberino doggorino blep smol shooberino wrinkler, super chub doge waggy wags sub woofer. Boof maximum borkdrive many pats h*ck yapper, long doggo vvv many pats. Noodle horse adorable doggo heckin good boys, corgo.</p></div><div class="col-1"></div></div>');
-		carry = true;
-		dtm();
 
 	}
 
+  	carry = true;
+	dtm();
+
+}
+
+function reset(){
+	carry = false;
+	dtm();
 }
 
 function drop(ev) {
