@@ -43,6 +43,11 @@ function drop(ev) {
       	? that.classList.replace('brdr-sl', 'brdr-none')
       	: that.classList.add('brdr-sl');
   	});
+
+  	that.addEventListener('dblclick', () => {
+  		
+  	});
+
 	carry = false;
 	dtm();
 }
