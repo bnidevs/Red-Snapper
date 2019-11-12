@@ -5,7 +5,7 @@ f.addEventListener("keydown", keyCheck);
 function keyCheck(event)
 {
    var keyID = event.keyCode;
-   if(keyID == 8 || keyID == 46){
+   if((keyID == 8 || keyID == 46) && f.activeElement.nodeName != 'INPUT'){
       wipeSelected();
    }
 }
