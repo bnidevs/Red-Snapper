@@ -15,6 +15,7 @@ var confirmSelected = () => {
    const all_len = all.length;
    for(var i = 0; i < all_len; i++){
       var t = all[0].value;
-      all[0].parentNode.innerHTML = t;
+      all[0].parentNode.innerHTML += t;
+      all[0].remove();
    }
 }
