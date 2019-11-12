@@ -10,10 +10,11 @@ function keyCheck(event)
    }
 }
 
-var wipeSelected = () => {
+var confirmSelected = () => {
    var all = f.getElementsByTagName("input");
    const all_len = all.length;
    for(var i = 0; i < all_len; i++){
-      all[0].remove();
+      var t = all[0].value;
+      all[0].parentNode.innerHTML = t;
    }
 }
