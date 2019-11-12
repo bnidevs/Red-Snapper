@@ -47,18 +47,9 @@ function drop(ev) {
   	});
 
   	that.addEventListener('dblclick', () => {
-  		if(ev.dataTransfer.getData("type") == "navdraggable"){
-			var tl = that.getElementsByTagName('p');
-			for(var i = 0; i < tl.length; i++){
-				var t = tl[i].innerHTML;
-				tl[i].innerHTML = '<input type="text">';
-				tl[i].childNodes[0].value = t;
-			}
-		}else{
-			var tl = that.getElementsByTagName('p');
-			for(var i = 0; i < tl.length; i++){
-				tl[i].innerHTML = '<textarea>' + tl[i].innerHTML + '</textarea>';
-			}
+  		var tl = that.getElementsByTagName('p');
+		for(var i = 0; i < tl.length; i++){
+			tl[i].innerHTML = '<textarea>' + tl[i].innerHTML + '</textarea>';
 		}
   	});
 
