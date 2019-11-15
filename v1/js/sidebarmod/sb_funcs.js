@@ -2,7 +2,7 @@ window.onload = function(){
 	document.getElementById("defsb").addEventListener("click", defaultreplace);
 	document.getElementById("sblayout").addEventListener("click", layoutreplace);
 	document.getElementById("sbmedia").addEventListener("click", mediareplace);
-	document.getElementById("sbtext").addEventListener("click", textreplace);
+	document.getElementById("sbstyle").addEventListener("click", stylereplace);
 	document.getElementById("sbanim").addEventListener("click", animreplace);
 	document.getElementById("sbprev").addEventListener("click", open_prev);
 }
@@ -31,8 +31,8 @@ var mediareplace = () => {
 	.catch(error => console.error('Error:', error));
 }
 
-var textreplace = () => {
-	fetch('https://raw.githubusercontent.com/bnidevs/Red-Snapper/master/v1/js/sidebarmod/text/textbar.html')
+var stylereplace = () => {
+	fetch('https://raw.githubusercontent.com/bnidevs/Red-Snapper/master/v1/js/sidebarmod/style/stylebar.html')
 	.then(response => response.text())
 	.then(function(response){
 		document.getElementById("sbreplloc").innerHTML = response;
@@ -74,7 +74,7 @@ var defaultreplace = () => {
 		document.getElementById("defsb").addEventListener("click", defaultreplace);
 		document.getElementById("sblayout").addEventListener("click", layoutreplace);
 		document.getElementById("sbmedia").addEventListener("click", mediareplace);
-		document.getElementById("sbtext").addEventListener("click", textreplace);
+		document.getElementById("sbstyle").addEventListener("click", stylereplace);
 		document.getElementById("sbanim").addEventListener("click", animreplace);
 		document.getElementById("sbprev").addEventListener("click", open_prev);
 	})
