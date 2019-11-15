@@ -64,6 +64,32 @@ var open_prev = () => {
 	new_win.document.body.innerHTML = prev_content.innerHTML;
 }
 
+var update = (s, b) => {
+	if(s == 'red'){
+		if(b){
+			document.getElementById("r_slider").value = document.getElementById("r_value").value;
+		}else{
+			document.getElementById("r_value").value = document.getElementById("r_slider").value;
+		}
+	}
+
+	if(s == 'blue'){
+		if(b){
+			document.getElementById("b_slider").value = document.getElementById("b_value").value;
+		}else{
+			document.getElementById("b_value").value = document.getElementById("b_slider").value;
+		}
+	}
+
+	if(s == 'green'){
+		if(b){
+			document.getElementById("g_slider").value = document.getElementById("g_value").value;
+		}else{
+			document.getElementById("g_value").value = document.getElementById("g_slider").value;
+		}
+	}
+}
+
 var defaultreplace = () => {
 	fetch('https://raw.githubusercontent.com/bnidevs/Red-Snapper/master/v1/js/sidebarmod/default/default.html')
 	.then(response => response.text())

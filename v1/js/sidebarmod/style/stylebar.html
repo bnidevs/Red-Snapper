@@ -18,7 +18,10 @@
 					<label for="red">R</label>
 				</td>
 				<td>
-      				<input type="range" id="r_value" name="red" min="0" max="255">
+      				<input type="range" id="r_slider" name="red" min="0" max="255" onchange="update('red', false)">
+      			</td>
+      			<td>
+      				<input type="number" id="r_value" name="red" min="0" max="255" onchange="update('red', true)">
       			</td>
       		</tr>
 		</li>
@@ -29,7 +32,10 @@
 					<label for="green">G</label>
 				</td>
 				<td>
-      				<input type="range" id="g_value" name="green" min="0" max="255">
+      				<input type="range" id="g_slider" name="green" min="0" max="255" onchange="update('green', false)">
+      			</td>
+      			<td>
+      				<input type="number" id="g_value" name="green" min="0" max="255" onchange="update('green', true)">
       			</td>
       		</tr>
 		</li>
@@ -40,7 +46,10 @@
 					<label for="blue">B</label>
 				</td>
 				<td>
-      				<input type="range" id="b_value" name="blue" min="0" max="255">
+      				<input type="range" id="b_slider" name="blue" min="0" max="255" onchange="update('blue', false)">
+      			</td>
+      			<td>
+      				<input type="number" id="b_value" name="blue" min="0" max="255" onchange="update('blue', true)">
       			</td>
       		</tr>
 		</li>
