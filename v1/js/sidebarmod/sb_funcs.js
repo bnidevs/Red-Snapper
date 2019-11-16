@@ -1,3 +1,8 @@
+var r_bg = 255, g_bg = 255, b_bg = 255;
+var r_tx = 0, g_tx = 0, b_tx = 0;
+
+var placement = true;
+
 window.onload = function(){
 	document.getElementById("defsb").addEventListener("click", defaultreplace);
 	document.getElementById("sblayout").addEventListener("click", layoutreplace);
@@ -64,27 +69,70 @@ var open_prev = () => {
 	new_win.document.body.innerHTML = prev_content.innerHTML;
 }
 
-var update = (s, b) => {
+var update_placement = () => {
+	placement = !placement;
+	update('red', true, true);
+	update('green', true, true);
+	update('blue', true, true);
+}
+
+var update = (s, b, placement_changed = false) => {
 	if(s == 'red'){
+
+		if(placement_changed){
+			document.getElementById("r_slider").value = (placement ? r_bg : r_tx);
+			document.getElementById("r_value").value = (placement ? r_bg : r_tx);
+		}
+
 		if(b){
+			if(placement){
+				r_bg = document.getElementById("r_value").value;
+			}
 			document.getElementById("r_slider").value = document.getElementById("r_value").value;
 		}else{
+			if(placement){
+				r_bg = document.getElementById("r_slider").value;
+			}
 			document.getElementById("r_value").value = document.getElementById("r_slider").value;
 		}
 	}
 
 	if(s == 'blue'){
+
+		if(placement_changed){
+			document.getElementById("b_slider").value = (placement ? b_bg : b_tx);
+			document.getElementById("b_value").value = (placement ? b_bg : b_tx);
+		}
+
 		if(b){
+			if(placement){
+				b_bg = document.getElementById("b_value").value;
+			}
 			document.getElementById("b_slider").value = document.getElementById("b_value").value;
 		}else{
+			if(placement){
+				b_bg = document.getElementById("b_slider").value;
+			}
 			document.getElementById("b_value").value = document.getElementById("b_slider").value;
 		}
 	}
 
 	if(s == 'green'){
+
+		if(placement_changed){
+			document.getElementById("g_slider").value = (placement ? g_bg : g_tx);
+			document.getElementById("g_value").value = (placement ? g_bg : g_tx);
+		}
+
 		if(b){
+			if(placement){
+				g_bg = document.getElementById("g_value").value;
+			}
 			document.getElementById("g_slider").value = document.getElementById("g_value").value;
 		}else{
+			if(placement){
+				g_bg = document.getElementById("g_slider").value;
+			}
 			document.getElementById("g_value").value = document.getElementById("g_slider").value;
 		}
 	}
