@@ -87,11 +87,15 @@ var update = (s, b, placement_changed = false) => {
 		if(b){
 			if(placement){
 				r_bg = document.getElementById("r_value").value;
+			}else{
+				r_tx = document.getElementById("r_value").value;
 			}
 			document.getElementById("r_slider").value = document.getElementById("r_value").value;
 		}else{
 			if(placement){
 				r_bg = document.getElementById("r_slider").value;
+			}else{
+				r_tx = document.getElementById("r_slider").value;
 			}
 			document.getElementById("r_value").value = document.getElementById("r_slider").value;
 		}
@@ -107,11 +111,15 @@ var update = (s, b, placement_changed = false) => {
 		if(b){
 			if(placement){
 				b_bg = document.getElementById("b_value").value;
+			}else{
+				b_tx = document.getElementById("b_value").value;
 			}
 			document.getElementById("b_slider").value = document.getElementById("b_value").value;
 		}else{
 			if(placement){
 				b_bg = document.getElementById("b_slider").value;
+			}else{
+				b_tx = document.getElementById("b_slider").value;
 			}
 			document.getElementById("b_value").value = document.getElementById("b_slider").value;
 		}
@@ -127,11 +135,15 @@ var update = (s, b, placement_changed = false) => {
 		if(b){
 			if(placement){
 				g_bg = document.getElementById("g_value").value;
+			}else{
+				g_tx = document.getElementById("g_value").value;
 			}
 			document.getElementById("g_slider").value = document.getElementById("g_value").value;
 		}else{
 			if(placement){
 				g_bg = document.getElementById("g_slider").value;
+			}else{
+				g_tx = document.getElementById("g_slider").value;
 			}
 			document.getElementById("g_value").value = document.getElementById("g_slider").value;
 		}
