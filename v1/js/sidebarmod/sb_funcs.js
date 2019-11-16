@@ -148,6 +148,8 @@ var update = (s, b, placement_changed = false) => {
 			document.getElementById("g_value").value = document.getElementById("g_slider").value;
 		}
 	}
+
+	document.getElementById("clr_view").backgroundColor = 'rgb(' + (placement ? r_bg : r_tx) + ',' + (placement ? b_bg : b_tx) + ',' + (placement ? g_bg : g_tx) + ')';
 }
 
 var defaultreplace = () => {
