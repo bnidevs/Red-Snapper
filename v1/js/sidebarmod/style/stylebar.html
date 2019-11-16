@@ -11,15 +11,25 @@
 <div class="sidebar-sticky">
 	<ul class="nav flex-column">
 
+		<table class="ml-4">
+
 		<li class="nav-item d-flex flex-row">
       		<span data-feather="color_placement"></span>
-      		<select name="color_placement" id="cp_select" class="ml-4 mb-2" onchange="update_placement()">
-			    <option value="bg">Background</option>
-			    <option value="tx">Text</option>
-			</select>
+      		<tr>
+      			<td>
+      			</td>
+      			<td>
+		      		<select name="color_placement" id="cp_select" class="ml-4 mb-2" onchange="update_placement()">
+					    <option value="bg">Background</option>
+					    <option value="tx">Text</option>
+					</select>
+				</td>
+				<td>
+					<div style="width: 100%; height: 100%" id="clr_view">
+					</div>
+				</td>
+			</tr>
 		</li>
-
-		<table class="ml-4">
 
 		<li class="nav-item d-flex flex-row">
       		<span data-feather="r"></span>
@@ -65,14 +75,6 @@
 		</li>
 
 		</table>
-
-		<li class="nav-item d-flex flex-row">
-      		<span data-feather="sum_color"></span>
-      		<span class="border border-dark">
-      			<div class="ml-4">
-      			</div>
-      		</span>
-		</li>
 
 	</ul>
 </div>
