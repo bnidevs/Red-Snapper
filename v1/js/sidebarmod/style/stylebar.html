@@ -13,65 +13,29 @@
 
 		<table class="ml-4">
 
-		<li class="nav-item d-flex flex-row">
-      		<span data-feather="color_placement"></span>
-      		<tr>
-      			<td>
-      			</td>
-      			<td align="left">
-		      		<select name="color_placement" id="cp_select" class="ml-4 mb-2" onchange="update_placement()">
-					    <option value="bg">Background</option>
-					    <option value="tx">Text</option>
-					</select>
-				</td>
-				<td>
-					<input type="number" id="clr_view" min="0" max="200" disabled>
-				</td>
-			</tr>
-		</li>
+			<li class="nav-item d-flex flex-row">
+	      		<span data-feather="color_placement"></span>
+	      		<tr>
+	      			<td>
+	      				Background
+	      			</td>
+	      			<td>
+						<input type="color" id="bg_clr_view" value="#ffffff">
+					</td>
+				</tr>
+			</li>
 
-		<li class="nav-item d-flex flex-row">
-      		<span data-feather="r"></span>
-      		<tr>
-      			<td>
-					<label for="red">R</label>
-				</td>
-				<td>
-      				<input type="range" id="r_slider" name="red" min="0" max="255" value="255" onchange="update('red', false)">
-      			</td>
-      			<td>
-      				<input type="number" id="r_value" name="red" min="0" max="255" value="255" onchange="update('red', true)">
-      			</td>
-      		</tr>
-		</li>
-		<li class="nav-item d-flex flex-row">
-      		<span data-feather="g"></span>
-      		<tr>
-      			<td>
-					<label for="green">G</label>
-				</td>
-				<td>
-      				<input type="range" id="g_slider" name="green" min="0" max="255" value="255" onchange="update('green', false)">
-      			</td>
-      			<td>
-      				<input type="number" id="g_value" name="green" min="0" max="255" value="255" onchange="update('green', true)">
-      			</td>
-      		</tr>
-		</li>
-		<li class="nav-item d-flex flex-row">
-      		<span data-feather="b"></span>
-      		<tr>
-      			<td>
-					<label for="blue">B</label>
-				</td>
-				<td>
-      				<input type="range" id="b_slider" name="blue" min="0" max="255" value="255" onchange="update('blue', false)">
-      			</td>
-      			<td>
-      				<input type="number" id="b_value" name="blue" min="0" max="255" value="255" onchange="update('blue', true)">
-      			</td>
-      		</tr>
-		</li>
+			<li class="nav-item d-flex flex-row">
+	      		<span data-feather="color_placement"></span>
+	      		<tr>
+	      			<td>
+	      				Text
+	      			</td>
+	      			<td>
+						<input type="color" id="bg_clr_view" value="#000000">
+					</td>
+				</tr>
+			</li>
 
 		</table>
 
