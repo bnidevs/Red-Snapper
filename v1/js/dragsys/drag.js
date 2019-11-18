@@ -48,12 +48,12 @@ function drop(ev) {
       	: that.classList.add('brdr-sl');
   	});
 
-	var editables = that.getElementsByTagName('p');
-	for(var i = 0; i < editables.size(); i++){
-	  	editables[i].addEventListener('dblclick', () => {
-			editables[i].innerHTML = '<textarea style="resize: both;">' + editables[i].innerHTML + '</textarea>';
-	  	});
-	}
+  	that.addEventListener('dblclick', () => {
+  		var tl = that.getElementsByTagName('p');
+		for(var i = 0; i < tl.length; i++){
+			tl[i].innerHTML = '<textarea style="resize: both;">' + tl[i].innerHTML + '</textarea>';
+		}
+  	});
 
 	carry = false;
 	dtm();
