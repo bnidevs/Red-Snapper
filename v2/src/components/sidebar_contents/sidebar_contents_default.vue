@@ -55,6 +55,17 @@
 
 <script>
 export default {
-  name: 'sidebar_contents_default'
+  name: 'sidebar_contents_default',
+  mounted() {
+    document.getElementById("sblayout").addEventListener("click", function(){replace_sidebar(1)});
+    document.getElementById("sbmedia").addEventListener("click", function(){replace_sidebar(2)});
+    document.getElementById("sbstyle").addEventListener("click", function(){replace_sidebar(3)});
+    document.getElementById("sbanim").addEventListener("click", function(){replace_sidebar(4)});
+  },
+  methods: {
+    replace_sidebar(id){
+        this.$emit("update_sidebar", id);
+    }
+  }
 }
 </script>
